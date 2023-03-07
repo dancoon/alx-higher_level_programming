@@ -5,5 +5,5 @@ def uppercase(str):
         if a >= 97 and a <= 122:
             a = a + 32
         i = chr(a)
-        print("{:c}".format(i), ends="")
-    print()
+        print("{:s}".format(i), ends="")
+    print("")
