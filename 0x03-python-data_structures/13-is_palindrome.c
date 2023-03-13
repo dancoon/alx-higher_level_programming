@@ -32,12 +32,13 @@ int is_palindrome(listint_t **head)
 	}
 
 	fast = *head;
+	current = prev;
 	while (current)
 	{
 		if (fast->n != current->n)
 			return (0);
 		current = current->next;
-		slow = slow->next;
+		fast = fast->next;
 	}
 	return (1);
 }
