@@ -9,8 +9,8 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast, *prev, *next, *middle, *current;
 
-	if (head == NULL)
-		return (0);
+	if (head == NULL || *head == NULL)
+		return (1);
 
 	slow = *head;
 	fast = *head;
@@ -23,7 +23,7 @@ int is_palindrome(listint_t **head)
 	prev = NULL;
 	middle = slow;
 	current = middle->next;
-	while (current-next)
+	while (current->next)
 	{
 		next = current->next;
 		current->next = prev;
