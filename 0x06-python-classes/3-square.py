@@ -1,4 +1,4 @@
-#!/usr/bin/pythons3
+#!/usr/bin/python3
 class Square:
     def __init__(self, s=0):
         if not type(s) is int:
