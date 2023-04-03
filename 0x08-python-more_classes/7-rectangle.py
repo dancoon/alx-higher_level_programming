@@ -74,11 +74,13 @@ class Rectangle:
         """
         return printable string rep of the rectangle
         """
-        s = ""
+        s = []
         if self.__width != 0 and self.__height != 0:
-                s += "\n".join(str(self.print_symbol) * self.__width
-                                for i in range(self.__height))
-        return s
+            for i in range(self.__height):
+                [s.append(str(self.print_symbol)) for j in range(self.__width)]
+                if i != self.__height - 1:
+                    s.append("\n")
+        return ("".join(s))
 
     def __repr__(self):
         """
