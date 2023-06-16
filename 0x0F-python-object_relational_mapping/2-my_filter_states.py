@@ -14,8 +14,8 @@ if __name__ == '__main__':
     c = db.cursor()
     c.execute(
             """SELECT * FROM `states`
-            WHERE name LIKE BINARY %s ORDER BY id ASC""",
-            (name_searched,))
+            WHERE name LIKE BINARY '{}' ORDER BY id ASC""".format(
+                name_searched))
     [print(state) for state in c.fetchall()]
     c.close()
     db.close()
