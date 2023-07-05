@@ -5,7 +5,8 @@ the body of the response (decoded in utf-8).
 """
 
 
-import urllib
+import urllib.request
+import urllib.error
 import sys
 
 if __name__ == "__main__":
