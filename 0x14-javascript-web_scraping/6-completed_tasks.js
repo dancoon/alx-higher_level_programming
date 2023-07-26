@@ -7,7 +7,7 @@ request(url, (err, response, body) => {
   if (err) console.log(err);
   else {
     const results = JSON.parse(body);
-    const completed = {};
+    let completed = {};
     for (const result of results) {
       if (result.completed) {
         if (completed[result.userId]) completed[result.userId]++;
